@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_welcome"
+    app:startDestination="@id/WelcomeScreen">
+
+    <fragment
+        android:id="@+id/WelcomeScreen"
+        android:name="com.example.calorifypro.WelcomeScreen"
+        android:label="Welcome Fragment"
+        tools:layout="@layout/fragment_welcome_screen">
+
+        <action
+            android:id="@+id/action_WelcomeScreen_to_LoginScreen"
+            app:destination="@id/LoginScreen" />
+
+        <action
+            android:id="@+id/action_WelcomeScreen_to_RegisterScreen"
+            app:destination="@id/RegisterScreen" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/LoginScreen"
+        android:name="com.example.calorifypro.LoginScreen"
+        android:label="Login Fragment"
+        tools:layout="@layout/fragment_login">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/RegisterScreen"
+        android:name="com.example.calorifypro.RegisterScreen"
+        android:label="Register Fragment"
+        tools:layout="@layout/fragment_register">
+
+    </fragment>
+
+</navigation>

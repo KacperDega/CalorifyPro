@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">CalorifyPro</string>
+    <string name="addDisclaimer"><u><i>Enter nutritional facts per 100g or 100ml</i></u></string>
+    <string name="defaultSumCal">Cal.: kcal</string>
+    <string name="defaultSumFat">Fat: g</string>
+    <string name="defaultSumCarbs">Carbs: g</string>
+
+</resources>

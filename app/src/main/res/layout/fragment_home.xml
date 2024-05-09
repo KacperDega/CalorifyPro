@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@android:color/transparent">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CalorifyPro"
+            android:textColor="@color/white"
+            android:textAppearance="@style/ToolbarTitleText"
+            android:layout_gravity="center"/>
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="2dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/dateTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="-2dp"
+                android:background="@drawable/border_drawable"
+                android:gravity="center"
+                android:text="Todays date"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textSize="22sp"
+                android:padding="2dp"/>
+
+            <TextView
+                android:id="@+id/targetTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/dateTextView"
+                android:layout_marginBottom="1dp"
+                android:background="@drawable/border_drawable"
+                android:gravity="center"
+                android:text="Calories goal: "
+                tools:text="Calories goal: 1234kcal"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textSize="22sp"
+                android:visibility="visible"
+                android:padding="2dp"/>
+
+            <EditText
+                android:id="@+id/targetEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/dateTextView"
+                android:layout_marginBottom="1dp"
+                android:background="@drawable/border_drawable"
+                android:gravity="center"
+                tools:hint="Target: "
+                android:inputType="number"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textSize="22sp"
+                android:visibility="gone"
+                android:imeOptions="actionDone"/>
+
+            <ImageButton
+                android:id="@+id/targetEditButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/dateTextView"
+                android:layout_alignEnd="@id/targetTextView"
+                android:src="@android:drawable/ic_menu_edit"
+                android:background="@android:color/transparent"
+                />
+
+            <ImageButton
+                android:id="@+id/targetCancelEditButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/dateTextView"
+                android:layout_alignEnd="@id/targetTextView"
+                android:src="@android:drawable/ic_menu_close_clear_cancel"
+                android:background="@android:color/transparent"
+                android:visibility="gone"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewFood"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/targetTextView"
+                android:layout_marginTop="1dp"
+                android:background="@android:color/transparent"
+                android:nestedScrollingEnabled="false"
+                android:padding="8dp" />
+
+            <LinearLayout
+                android:id="@+id/sumLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/recyclerViewFood"
+                android:layout_marginBottom="1dp"
+                android:background="@drawable/border_drawable"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/caloriesTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Cal.:"
+                    tools:text="Cal.: 1234g"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                    android:textSize="18sp"
+                    android:gravity="center_horizontal"
+                    />
+
+                <TextView
+                    android:id="@+id/fatTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Fat:"
+                    tools:text="Fat: 1234g"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                    android:textSize="18sp"
+                    android:gravity="center_horizontal"/>
+
+                <TextView
+                    android:id="@+id/carbsTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Carbs:"
+                    tools:text="Carbs: 1234g"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                    android:textSize="18sp"
+                    android:gravity="center_horizontal"/>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/buttonAddMeal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sumLinearLayout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="0dp"
+                android:backgroundTint="@color/rosegold"
+                android:text="Add Meal"
+                android:textColor="@android:color/white" />
+
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>

@@ -1,0 +1,18 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_home"
+        android:icon="@drawable/ic_home"
+        android:title="Home" />
+    <item
+        android:id="@+id/menu_leaderboard"
+        android:icon="@drawable/ic_ranking"
+        android:title="Leaderboard" />
+    <item
+        android:id="@+id/menu_history"
+        android:icon="@drawable/ic_calendar"
+        android:title="History" />
+    <item
+        android:id="@+id/menu_user"
+        android:icon="@drawable/ic_user"
+        android:title="User profile" />
+</menu>
